@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IISLogParser.Sample", "IISLogParser.Sample\IISLogParser.Sample.csproj", "{43BD79DD-F30A-4F41-BA7C-045033563F32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IISLogParser", "IISLogParser\IISLogParser.csproj", "{F878AC3E-89A5-48E6-99AD-EF6875024E98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43BD79DD-F30A-4F41-BA7C-045033563F32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BD79DD-F30A-4F41-BA7C-045033563F32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43BD79DD-F30A-4F41-BA7C-045033563F32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BD79DD-F30A-4F41-BA7C-045033563F32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F878AC3E-89A5-48E6-99AD-EF6875024E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F878AC3E-89A5-48E6-99AD-EF6875024E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F878AC3E-89A5-48E6-99AD-EF6875024E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F878AC3E-89A5-48E6-99AD-EF6875024E98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {541BBD27-B58F-4908-949C-093C571D0F71}
+	EndGlobalSection
+EndGlobal
