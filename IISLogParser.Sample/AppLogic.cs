@@ -12,7 +12,7 @@ namespace IISLogParser.Sample
         public void ExecuteTask(string[] args)
         {
             var reader = new Reader(File.OpenText("Data/iis.log"));
-            var logRecords = reader.Read().ToList();
+            var logEvents = reader.Read().ToList();
             while (true)
             {
                 Console.WriteLine("1. Type : totalcount");
@@ -23,11 +23,11 @@ namespace IISLogParser.Sample
                 var input = Console.ReadLine().ToLower();
                 if (input == "totalcount")
                 {
-                    TotalCount(logRecords);
+                    TotalCount(logEvents);
                 }
                 else if (input == "average")
                 {
-                    Average(logRecords);
+                    Average(logEvents);
                 }
                 else if (input == "exit")
                 {
@@ -36,9 +36,9 @@ namespace IISLogParser.Sample
             }
         }
 
-        public void TotalCount(List<LogEvent> logRecords)
+        public void TotalCount(List<LogEvent> logEvents)
         {
-            var groups = logRecords.GroupBy(x => x.ServerIpAddress);
+            var groups = logEvents.GroupBy(x => x.ServerIpAddress);
             foreach (var group in groups)
             {
                 var info = $"{group.Key} - Count : {group.Count()}";
@@ -48,10 +48,10 @@ namespace IISLogParser.Sample
             Console.WriteLine("----------------------");
         }
 
-        public void Average(List<LogEvent> logRecords)
+        public void Average(List<LogEvent> logEvents)
         {
-            var count = logRecords.Count;
-            var totalTimeTaken = logRecords.Sum(x => x.TimeTaken);
+            var count = logEvents.Count;
+            var totalTimeTaken = logEvents.Sum(x => x.TimeTaken);
             var averageTimeTaken = totalTimeTaken / (double)count;
             Console.WriteLine($"Average TimeTaken : {averageTimeTaken}");
 
